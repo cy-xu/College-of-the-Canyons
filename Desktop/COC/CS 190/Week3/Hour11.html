@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hour 11</title>
+	<script>
+		function countListItems() {
+			var olElement = document.getElementById("toDoList");
+			var listItems = olElement.getElementsByTagName("li");
+			alert("The ordered list contains " + listItems.length + " items");
+		}
+		function commentConcat () {
+			var bodyElement = document.getElementById("htmlBody");
+			var comments = "";
+			for (var i=0; i < bodyElement.childNodes.length; i++) {
+				if(bodyElement.childNodes[i].nodeType == 8) {
+					comments += bodyElement.childNodes[i].nodeValue;
+				}
+			}
+			alert(comments);
+		}
+		window.onload = countListItems;
+	</script>
+</head>
+<body id="htmlBody">
+	<!-- This is a header -->
+	<h1>Things To Do</h1>
+	<!-- This is an ordered list -->
+	<ol id="toDoList">
+		<li>Mow the lawn</li>
+		<li>Clean the windows</li>
+		<li>Answer your email</li>
+	</ol>
+	<!-- This is a paragraph -->
+	<p id="toDoNotes">Make sure all these are completed by 8pm so you can watch the game on TV!</p>
+	<!-- This is a button -->
+	<input type="button" value="Show Body Comments" onclick="commentConcat()" />
+</body>
+</html>

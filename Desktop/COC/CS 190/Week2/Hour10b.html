@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hour 10b</title>
+	<script src="cookies.js"></script>
+	<script>
+		window.onload = function() {
+			document.getElementById("output").innerHTML = "Your cookie value: " + getCookie("myCookieData");
+		}
+		document.getElementById("delete").onclick = function() {
+			deleteCookie(getCookie("myCookieData"));
+		}
+	</script>
+</head>
+<body>
+	<a href="Hour10a.html">Back to Cookie Test Page 1</a><br/>
+	<input id="delete" type="button" value="Delete Cookie" />
+	<div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hour 5</title>
+	<script>
+		function wrangleArray()
+		{
+			var sentence = prompt("Please enter a sentence");//user types in a sentence
+			var newSentence = "";
+			document.getElementById("div1").innerHTML = "<p>" + sentence + "</p>";//original sentence in div1 and displayed on page
+			var words = sentence.split(" ");//array with each word separated
+			
+			//user selects a word from sentence
+			var wordAnswer;
+			var i;
+			while (true)
+			{
+				var breaker = false;
+				wordAnswer = prompt("Please type in a single word from the sentence");
+				for(i=0; i < words.length; i++)
+				{
+					if (wordAnswer.toUpperCase() == words[i].toUpperCase())
+					{
+						breaker = true;
+						break;
+					}
+				}
+				if (breaker == true)
+				{
+					break;
+				}
+			}
+			
+			//option to remove or replace
+			var optionAnswer;
+			while (true)
+			{
+				optionAnswer = prompt("Would you like to \"remove\" or \"replace\"")
+				if (optionAnswer.toUpperCase() == "REMOVE" || optionAnswer.toUpperCase() == "REPLACE")
+				{
+					break;
+				}
+			}
+
+			document.write(words.indexOf(wordAnswer));
+			//remove
+			var replaceAnswer;
+			if (optionAnswer.toUpperCase() == "REMOVE")
+			{
+				words.splice(words.indexOf(wordAnswer), 1);
+			}
+			else if (optionAnswer.toUpperCase() == "REPLACE")
+			{
+				
+				words.splice(words.indexOf(wordAnswer), 1, prompt("What would you like to replace it with?"));
+			}
+			//var message = words.splice(3,2,"powerful");
+			//alert("Removed words: " + message);
+			document.getElementById("div2").innerHTML = "<p>" + words.join(" ") + "</p>";
+		}
+	</script>
+</head>
+<body>
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<script>wrangleArray();</script>
+</body>
+</html>		

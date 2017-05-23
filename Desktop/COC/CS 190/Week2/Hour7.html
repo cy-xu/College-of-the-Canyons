@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hour 7</title>
+	<script>
+		Date.prototype.getYesterday = function()
+		{
+			var dayNum = this.getDay() - 1;
+			var dayString = "";
+			if (dayNum == -1)
+			{
+				dayString = "Saturday";
+			}
+			else if (dayNum == 0)
+			{
+				dayString = "Sunday";
+			}
+			else if (dayNum == 1)
+			{
+				dayString = "Monday";
+			}
+			else if (dayNum == 2)
+			{
+				dayString = "Tuesday";
+			}
+			else if (dayNum == 3)
+			{
+				dayString = "Wednesday";
+			}
+			else if (dayNum == 4)
+			{
+				dayString = "Thursday";
+			}
+			else if (dayNum == 5)
+			{
+				dayString = "Friday";
+			}
+			return dayString;
+		}
+	</script>
+</head>
+<body>
+	<script>
+		var today = new Date()
+		var yesterday = today.getYesterday();
+		alert(yesterday);
+	</script>
+</body>
+</html>		

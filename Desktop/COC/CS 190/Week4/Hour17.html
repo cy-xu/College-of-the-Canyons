@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hour 17</title>
+	<script src="myAjaxLib.js"></script>
+	<script>
+		function display(content) {
+			document.getElementById("displaydiv").innerHTML = content;
+		}
+		window.onload = function(){
+			document.getElementById("btn1").onclick = function(){
+				document.getElementById("displaydiv").innerHTML = "Loading metatags";
+				var url = document.getElementById("txt1").value;
+				doAjax("metatags.php", "url=" + url, "display", "post", 0);
+			}
+		}
+	</script>
+</head>
+<body>
+	http://<input type="text" id="txt1" value="" />
+	<input type="button" id="btn1" value="Get Keywords" />
+	<h3>Keywords Received:</h3>
+	<div id="displaydiv"></div>
+</body>
+</html>

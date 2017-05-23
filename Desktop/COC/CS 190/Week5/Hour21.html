@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css"/>
+	<title>Hour 21</title>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+	<script>
+		$(function() {
+			$( "#tabs" ).tabs({
+				//active: 1
+				//collapsible: true
+				event: "mouseover"
+			});
+			
+			//var active = $("#tabs").tabs("option", "active");
+			//$("#tabs").tabs("option", "active", 1);
+			
+			//var collapsible = $( "#tabs" ).tabs( "option", "collapsible" );
+			//$( "#tabs" ).tabs( "option", "collapsible", true );
+			
+			var event = $( "#tabs" ).tabs( "option", "event" );
+			$( "#tabs" ).tabs( "option", "event", "mouseover" );
+		});
+	</script>
+</head>
+<body>
+	<div id="tabs">
+		<ul>
+			<li><a href="#tabs-1">Home</a></li>
+			<li><a href="#tabs-2">About Us</a></li>
+			<li><a href="#tabs-3">Products</a></li>
+		</ul>
+		<div id="tabs-1">
+			<p>Welcome to our online store....</p>
+		</div>
+		<div id="tabs-2">
+			<p>We've been selling widgets for 5 years ...</p>
+		</div>
+		<div id="tabs-3">
+			<p>We sell all kinds of widgets ...</p>
+		</div>
+	</div>
+</body>
+</html>

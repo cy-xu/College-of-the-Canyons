@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hour 3</title>
+	<script>
+		function inFahrenheit(cTemp)
+		{
+			return (((cTemp * 9) / 5 ) + 32 );
+		}
+	</script>
+</head>
+<body>
+	<script>
+		var cTemp = prompt("Please enter temperature in Celsius");
+		var hTemp = inFahrenheit(cTemp);
+		document.write("Temperature in Celsius: " + cTemp + " degrees<br/>");
+		document.write("Temperature in Fahrenheit: " + hTemp + " degrees");
+	</script>
+</body>
+</html>	
