@@ -1,0 +1,46 @@
+/*
+ * Andriy Korsun
+ * Professor Ferguson
+ * Comp Sci 282, Project 2
+ * 11/10/2015
+ */
+package tree234app;
+
+////////////////////////////////////////////////////////////////
+
+class DataItem
+
+   {
+
+   public long dData;          
+   String record;                
+   public DataItem(long dd)    
+
+      { dData = dd; }
+
+
+
+   public void displayItem()   // display item, format "/27"
+
+      { System.out.print("/"+dData); }
+
+//--------------------------------------------------------------
+   
+   public void setRecord(String rec)  // set the record
+   {
+       record = rec;
+   }
+
+//--------------------------------------------------------------
+   
+   
+   public String getRecord() // get the record
+   {
+   
+       return record;
+   
+   }
+   
+//--------------------------------------------------------------
+
+   }  // end class DataItem

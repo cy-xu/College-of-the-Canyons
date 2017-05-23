@@ -1,0 +1,149 @@
+/*
+ * Andriy Korsun
+ * Professor Ferguson
+ * Comp Sci 282, Project 2
+ * 11/10/2015
+ */
+package tree234app;
+
+
+public class BTree extends Tree234 {
+
+    // -------------------------------------------------------------
+    public void split(Node thisNode) // split the node
+    {
+
+        // assumes node is full
+        Node parent;
+       
+        int dataItemsToMove = Node.getOrder() / 2;
+
+        
+        DataItem[] items = new DataItem[dataItemsToMove];
+
+        
+        int childrenToMove = dataItemsToMove;
+
+        
+        Node[] children = new Node[childrenToMove];
+
+        int itemIndex;
+
+        // save the keys into the temporary keys array putting last key at end of array
+        for (int i = dataItemsToMove - 1; i >= 0; i--) {
+
+            items[i] = thisNode.removeItem();
+
+        }
+
+        int childIndex = childrenToMove - 1;
+
+        // save the children to the temporary children array putting the last child at end of array
+        for (int i = Node.getOrder() - 1; i > Node.getOrder() - 1 - childrenToMove; i--) {
+
+            children[childIndex--] = thisNode.disconnectChild(i);
+
+        }
+
+        Node newRight = new Node();       // make new node
+
+        if (thisNode == root) // if this is the root,
+        {
+
+            root = new Node();                // make new root
+
+            parent = root;                    // root is our parent
+
+            root.connectChild(0, thisNode);   // connect to parent
+
+        } else // this node not the root
+        {
+            parent = thisNode.getParent();    // get parent
+        }
+
+        // deal with parent
+        itemIndex = parent.insertItem(items[0]); // insert first item in array to parent this is middle item
+
+        int n = parent.getNumItems();         // total items?
+
+        for (int j = n - 1; j > itemIndex; j--) // move parent's
+        {                                      // connections
+
+            Node temp = parent.disconnectChild(j); // one child
+
+            parent.connectChild(j + 1, temp);        // to the right
+
+        }
+
+        // connect newRight to parent
+        parent.connectChild(itemIndex + 1, newRight);
+
+        
+        for (int i = 1; i < dataItemsToMove; i++) {
+
+            newRight.insertItem(items[i]);
+
+        }
+
+        
+        
+        for (int i = 0; i < dataItemsToMove; i++) {
+
+            newRight.connectChild(i, children[i]);
+
+        }
+
+        
+
+    }  
+
+   public void insert(DataItem tempItem)
+
+      {
+
+      Node curNode = root;
+
+      
+      long dValue = tempItem.dData;
+
+
+      while(true)
+
+         {
+
+         if( curNode.isFull() )               // if node full,
+
+            {
+
+            split(curNode);                   // split it
+
+            curNode = curNode.getParent();    // back up
+
+                                              // search once
+
+            curNode = getNextChild(curNode, dValue);
+
+            }  // end if(node is full)
+
+
+
+         else if( curNode.isLeaf() )          // if node is leaf,
+
+            break;                            // go insert
+
+         // node is not full, not a leaf; so go to lower level
+
+         else
+
+            curNode = getNextChild(curNode, dValue);
+
+         }  // end while
+
+
+
+      curNode.insertItem(tempItem);       // insert new DataItem
+
+      }  // end insert()
+
+
+}

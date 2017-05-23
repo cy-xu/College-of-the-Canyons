@@ -1,0 +1,297 @@
+/*
+ * Andriy Korsun
+ * Professor Ferguson
+ * Comp Sci 282, Project 2
+ * 11/10/2015
+ * 234 Trees --> B-Trees
+ */
+package tree234app;
+
+
+import java.io.*;
+import java.util.StringTokenizer;
+
+////////////////////////////////////////////////////////////////
+public class Tree234App {
+
+    
+    public static void populateTree(Tree234 theTree) {
+        theTree.insert(50);
+
+        theTree.insert(40);
+
+        theTree.insert(60);
+
+        theTree.insert(30);
+
+        theTree.insert(70);
+
+        return;
+
+    }
+
+    
+    public static void populateTreeFullNode(Tree234 theTree) {
+
+        int order = Node.getOrder();
+        int keysMovedToRight;
+
+        
+        for (int i = 0; i < order - 1; ++i) {
+            theTree.insert(2 * i);
+        }
+
+        if (order % 2 == 0) {
+            keysMovedToRight = order / 2 - 1;
+        } else {
+            keysMovedToRight = order / 2;
+        }
+
+        
+        for (int i = 0; i < order - keysMovedToRight; ++i) {
+            theTree.insert(2 * order + 2 * i);
+        }
+
+        return;
+
+    }
+
+    
+    public static void populateTreeOneFullNode(Tree234 theTree) {
+
+        int order = Node.getOrder();
+
+        
+        for (int i = 0; i < order - 1; ++i) {
+            theTree.insert(2 * i);
+        }
+
+        return;
+
+    }
+
+    
+        
+    public static BTree testReadData() throws IOException {
+        
+        //data5.txt was 1000 random numbers between 1 and one million.
+        //making it easy to check that it could find the numbers there
+        // and not find the numbers not there
+
+        BTree bTree;  // store the newly created tree
+
+        bTree = new BTree();
+
+        String file = "data5.txt";
+        String line;
+        long key;
+        DataItem nextItem;
+
+        
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+
+            while ((line = br.readLine()) != null) {
+                StringTokenizer tokens = new StringTokenizer(line, ",", true);
+                key = Integer.parseInt(tokens.nextToken());
+                nextItem = new DataItem(key);
+                nextItem.record = line;
+                bTree.insert(nextItem);
+
+            }
+        }
+        bTree.displayTree();
+        return bTree;
+    }
+
+    
+    public static BTree readData() throws IOException {
+
+        BTree bTree;  
+
+        System.out.print("Enter the name of the file to read: ");
+        String fname = getString();
+        System.out.print("The current order of the tree is: " + String.valueOf(Node.getOrder() + ".\n"));
+        System.out.print("Do you want to change the order 'Y'es or 'N'o? ");
+
+        
+        char ans = 'q';   // q means invalid
+
+        while (ans == 'q') {
+
+            ans = getChar();
+
+            switch (ans) {
+                case 'Y':  // fall through to lower case
+                case 'y':
+
+                    System.out.print("The order must be 4 or higher. Enter the new order: ");
+
+                    int order = getInt();
+
+                    while (order < 4) {
+                        System.out.print("The order must be 4 or higher. Enter the new order: ");
+                        order = getInt();
+                    }
+
+                    Node.setOrder(order);  // get the new order and set it in Node
+
+                    break;
+                case 'N':
+                case 'n':  // do nothing
+                    break;
+                default:  // invalid response so repeat while loop
+                    System.out.print("That was not a valid response.\n");
+                    ans = 'q';  // set invalid response
+            }
+
+        }
+        bTree = new BTree();
+
+        String file = fname;
+        String line;
+        long key;
+        DataItem nextItem;
+
+        
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+
+            while ((line = br.readLine()) != null) {
+                StringTokenizer tokens = new StringTokenizer(line, ",", true);
+                key = Integer.parseInt(tokens.nextToken());
+                nextItem = new DataItem(key);
+                nextItem.record = line;
+                bTree.insert(nextItem);
+
+            }
+        }
+        return bTree;
+    }
+
+    public static void main(String[] args) throws IOException {
+
+        long value;
+
+        Tree234 theTree = new Tree234();
+
+        populateTree(theTree);
+
+        while (true) {
+
+            System.out.print("Enter first letter of ");
+
+            System.out.print("show, insert, find, change order, read or quit: ");
+
+            char choice = getChar();
+
+            switch (choice) {
+
+                case 's':
+
+                    theTree.displayTree();
+
+                    break;
+
+                case 'i':
+
+                    System.out.print("Enter value to insert: ");
+
+                    value = getInt();
+
+                    theTree.insert(value);
+
+                    break;
+
+                case 'f':
+
+                    System.out.print("Enter value to find: ");
+
+                    value = getInt();
+
+                    int found = theTree.find(value);
+
+                    if (found != -1) {
+                        System.out.println("Found " + value);
+                    } else {
+                        System.out.println("Could not find " + value);
+                    }
+
+                    break;
+
+                case 'c':
+
+                    System.out.print("The order must be 4 or higher. Enter the new order: ");
+
+                    int order = getInt();
+
+                    while (order < 4) {
+                        System.out.print("The order must be 4 or higher. Enter the new order: ");
+                        order = getInt();
+                    }
+
+                    Node.setOrder(order);  // get the new order and set it in Node
+
+                    if (order == 4) {
+                        theTree = new Tree234();  // make a new 234Tree
+                        //theTree = new BTree();   //  testing for same result with BTree and Tree234
+                        populateTreeFullNode(theTree);
+                    } else {
+                        theTree = new BTree();   // otherwise make a new BTree
+                        populateTreeFullNode(theTree);
+                    }
+                    break;
+                case 'r':
+
+                    //theTree = testReadData();  // for testing only.
+                    theTree = readData();
+
+                    break;
+
+                case 'q':
+                    System.out.print("Goodbye.\n");
+
+                    return;
+
+                default:
+
+                    System.out.print("Invalid entry\n");
+
+            }  // end switch
+
+        }  // end while
+
+    }  // end main()
+
+//--------------------------------------------------------------
+    public static String getString() throws IOException {
+
+        InputStreamReader isr = new InputStreamReader(System.in);
+
+        BufferedReader br = new BufferedReader(isr);
+
+        String s = br.readLine();
+
+        return s;
+
+    }
+
+//--------------------------------------------------------------
+    public static char getChar() throws IOException {
+
+        String s = getString();
+
+        return s.charAt(0);
+
+    }
+
+//-------------------------------------------------------------
+    public static int getInt() throws IOException {
+
+        String s = getString();
+
+        return Integer.parseInt(s);
+
+    }
+
+//-------------------------------------------------------------
+}  // end class Tree234App
+

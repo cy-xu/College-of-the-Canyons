@@ -1,0 +1,34 @@
+Create 1 project with 1 main method
+Add 4 recursive methods to your program. For each method have the main method ask for user 
+input and then call the rucursive method, passing it the parameter(s) needed as input to the method. 
+Here are the 4 recursive methods:
+
+
+
+Exercise #4 Page 189 sumInts(begin,end) no global variables allowed
+-enter 2 ints, first one smaller
+call recursive method 5 + 6 + 7 + 8 + 9 ... sum of int 5 to 9 ---- 35
+" Given two integers start and end, where end is greater than start, 
+write a recursive Java method that returns the sum of the integers from start through end, inclusive. "
+
+
+Exercise #8 Page 190 Method minChar, no global variables allowed
+enter a string _________ -- make all upper or all lowercase
+call recursive method
+smallest char is 9
+" Write a method called minChar that returns the minimum character (using the ASCII collating sequence) 
+in a given string. So for example, minChar("hello") returns 'e'. "
+
+
+Programming Problem #1 Page 195 Nonoverlapping occurances of a substring
+"Write a recursive method that counts the number of nonoverlapping occurrences of a substring in a given string."
+
+
+Programming Problem #2 Page 195 Double Your Pay, Everyday! Format answer in dollars and cents e.g. $ddd.cc
+"enter the number of days: (1-31)"
+"you have been offered a one month job that pays as follows: on the first day of the month, you are paid 
+1 cent.  On the second day, 2 cents, on the third, 4 cents, and so forth, the amount doubles every day.  
+Write a recursive method that, given the day number, computes the amount of money paid that day.  
+Would you want this job? "
+
+Implement the project using the s
