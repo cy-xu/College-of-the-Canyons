@@ -1,0 +1,16 @@
+﻿Build started 3/15/2016 12:03:18 PM.
+     1>Project "c:\Users\student-hslh133\documents\visual studio 2012\Projects\CS122Project1\CS122Project1\CS122Project1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Figure210Week3.cpp Figure213.cpp Figure26Week3.cpp
+         Figure26Week3.cpp
+     1>c:\users\student-hslh133\documents\visual studio 2012\projects\cs122project1\cs122project1\figure26week3.cpp(16): warning C4101: 'div' : unreferenced local variable
+         Figure213.cpp
+         Figure210Week3.cpp
+         Generating Code...
+     1>c:\users\student-hslh133\documents\visual studio 2012\projects\cs122project1\cs122project1\figure26week3.cpp(19): error C4700: uninitialized local variable 'exam1' used
+     1>c:\users\student-hslh133\documents\visual studio 2012\projects\cs122project1\cs122project1\figure26week3.cpp(20): error C4700: uninitialized local variable 'exam2' used
+     1>Done Building Project "c:\Users\student-hslh133\documents\visual studio 2012\Projects\CS122Project1\CS122Project1\CS122Project1.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.88
