@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment1.params=words
+comment1.target=int\ length(java.util.ArrayList)
+comment2.params=x
+comment2.target=int\ totalLength(java.util.ArrayList)
+comment3.params=words\ newWord
+comment3.target=java.util.ArrayList\ add(java.util.ArrayList,\ java.lang.String)
+comment4.params=x\ y
+comment4.target=int\ indexOf(java.util.ArrayList,\ java.lang.String)
+comment5.params=x\ y
+comment5.target=int\ count(java.util.ArrayList,\ java.lang.String)
+comment6.params=words\ newWord
+comment6.target=java.util.ArrayList\ addOrder(java.util.ArrayList,\ java.lang.String)
+numComments=7

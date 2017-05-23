@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment1.params=array1\ array2
+comment1.target=int[]\ vectorAdd(int[],\ int[])
+comment2.params=array1\ array2
+comment2.target=int[]\ vectorSubtract(int[],\ int[])
+comment3.params=array
+comment3.target=int\ sumUp(int[])
+comment4.params=array\ x
+comment4.target=int[]\ scalarMult(int[],\ int)
+comment5.params=array1\ array2
+comment5.target=int\ dotProduct(int[],\ int[])
+comment6.params=array
+comment6.target=int\ minArray(int[])
+comment7.params=array
+comment7.target=int\ maxArray(int[])
+comment8.params=array
+comment8.target=void\ toString(int[])
+comment9.params=array
+comment9.target=int[]\ negEntries(int[])
+numComments=10

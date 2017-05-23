@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=a
+comment0.target=void\ lock(int)
+comment1.params=a
+comment1.target=void\ unlock(int)
+comment2.params=
+comment2.target=boolean\ isLocked()
+numComments=3

@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Diary()
+comment1.params=a
+comment1.target=void\ unlock(int)
+comment2.params=a
+comment2.target=void\ lock(int)
+comment3.params=
+comment3.target=boolean\ isLocked()
+comment4.params=newone
+comment4.target=void\ addTask(JournalEntry)
+comment5.params=
+comment5.target=int\ numEntries()
+comment6.params=
+comment6.target=int\ numWords()
+comment7.params=
+comment7.target=JournalEntry\ getHighest()
+comment8.params=n
+comment8.target=void\ removeTasks(int)
+comment9.params=
+comment9.target=void\ printAll()
+numComments=10

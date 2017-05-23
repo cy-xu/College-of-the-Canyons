@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment1.params=a\ b
+comment1.target=Fraction\ fadd(Fraction,\ Fraction)
+comment2.params=a\ b
+comment2.target=Fraction\ fsubtract(Fraction,\ Fraction)
+comment3.params=a\ b
+comment3.target=Fraction\ fmultiply(Fraction,\ Fraction)
+comment4.params=a\ b
+comment4.target=Fraction\ fdivide(Fraction,\ Fraction)
+comment5.params=a\ b
+comment5.target=boolean\ fequal(Fraction,\ Fraction)
+comment6.params=fracs
+comment6.target=Fraction\ maxDenom(Fraction[])
+numComments=7

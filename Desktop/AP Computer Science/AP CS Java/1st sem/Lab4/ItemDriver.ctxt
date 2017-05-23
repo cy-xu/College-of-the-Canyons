@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=x
+comment0.target=int\ countWeapons(Item[])
+comment1.params=x
+comment1.target=double\ totalWeight(Item[])
+comment2.params=a\ b
+comment2.target=int\ attack(Weapon,\ Armor)
+comment3.params=x
+comment3.target=int\ countPotions(java.util.ArrayList)
+numComments=4

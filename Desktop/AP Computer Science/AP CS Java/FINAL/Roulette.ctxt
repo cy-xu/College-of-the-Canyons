@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=cash
+comment0.target=Roulette(double)
+comment1.params=
+comment1.target=double\ getMoney()
+comment2.params=
+comment2.target=void\ gameRoulette()
+numComments=3

@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=n
+comment0.target=int\ count7(int)
+comment1.params=base\ n
+comment1.target=int\ powerN(int,\ int)
+comment2.params=str\ sub
+comment2.target=int\ strCount(java.lang.String,\ java.lang.String)
+comment3.params=x
+comment3.target=boolean\ power2(int)
+comment4.params=n
+comment4.target=int\ fibonacci(int)
+comment5.params=x\ y
+comment5.target=int\ gcf(int,\ int)
+numComments=6

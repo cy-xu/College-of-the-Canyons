@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=projects
+comment0.target=Homework\ worthMost(Homework[])
+comment1.params=assignments
+comment1.target=java.util.ArrayList\ removeNines(java.util.ArrayList)
+comment2.params=x\ y
+comment2.target=int\ intPower(int,\ int)
+comment3.params=input
+comment3.target=java.lang.String\ capFirst(java.lang.String)
+comment4.params=words\ x
+comment4.target=java.lang.String[]\ remove(java.lang.String[],\ int)
+numComments=5

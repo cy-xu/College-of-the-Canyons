@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment1.params=x\ y
+comment1.target=java.lang.String\ concat(java.lang.String,\ java.lang.String)
+comment2.params=x\ y
+comment2.target=java.lang.String\ printX(java.lang.String,\ int)
+comment3.params=x
+comment3.target=java.lang.String\ makePlural(java.lang.String)
+comment4.params=x
+comment4.target=java.lang.String\ reverse(java.lang.String)
+comment5.params=x\ y
+comment5.target=int\ countLetter(java.lang.String,\ char)
+comment6.params=x
+comment6.target=int\ countSpaces(java.lang.String)
+comment7.params=x\ y
+comment7.target=boolean\ firstLetterEqual(java.lang.String,\ java.lang.String)
+comment8.params=x\ y
+comment8.target=boolean\ caseEquals(java.lang.String,\ java.lang.String)
+numComments=9

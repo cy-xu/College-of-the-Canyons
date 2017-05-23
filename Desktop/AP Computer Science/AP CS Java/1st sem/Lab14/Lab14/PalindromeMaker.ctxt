@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=str
+comment0.target=PalindromeMaker(java.lang.String)
+comment1.params=str
+comment1.target=java.lang.String\ reverse(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment3.params=
+comment3.target=java.lang.String\ originalString()
+comment4.params=
+comment4.target=int\ length()
+comment5.params=otherPalindrome
+comment5.target=boolean\ equals(PalindromeMaker)
+numComments=6

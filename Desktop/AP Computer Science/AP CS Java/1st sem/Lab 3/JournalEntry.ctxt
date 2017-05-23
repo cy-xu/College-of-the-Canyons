@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=entryInput\ priorityInput
+comment0.target=JournalEntry(java.lang.String,\ int)
+comment1.params=entryInput
+comment1.target=JournalEntry(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getEntry()
+comment3.params=x
+comment3.target=void\ setEntry(java.lang.String)
+comment4.params=
+comment4.target=int\ wordCount()
+comment5.params=
+comment5.target=int\ getTotalCount()
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment7.params=b
+comment7.target=int\ compareTo(JournalEntry)
+comment8.params=
+comment8.target=int\ getPriority()
+comment9.params=a
+comment9.target=void\ setPriority(int)
+numComments=10

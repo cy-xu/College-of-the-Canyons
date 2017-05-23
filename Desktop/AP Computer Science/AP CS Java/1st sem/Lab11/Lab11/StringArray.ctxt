@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=x\ y
+comment0.target=boolean\ allEqual(java.lang.String[],\ java.lang.String[])
+comment1.params=x
+comment1.target=java.lang.String[]\ capsLock(java.lang.String[])
+comment2.params=x
+comment2.target=java.lang.String[]\ reverse(java.lang.String[])
+comment3.params=x\ y
+comment3.target=void\ searchString(java.lang.String[],\ java.lang.String)
+comment4.params=x\ y
+comment4.target=int\ countLetter(java.lang.String[],\ char)
+numComments=5

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=array
+comment0.target=int[][]\ zeroNags(int[][])
+comment1.params=array
+comment1.target=int\ sumAll(int[][])
+comment2.params=m\ n
+comment2.target=int[][]\ timesTable(int,\ int)
+numComments=3

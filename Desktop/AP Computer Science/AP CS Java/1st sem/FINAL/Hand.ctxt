@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Hand()
+comment1.params=x
+comment1.target=void\ addCard(Card)
+comment2.params=x
+comment2.target=void\ removeCard(int)
+comment3.params=
+comment3.target=int\ handSum()
+comment3.text=public\ void\ emptyHand()\n\ \ \ \ {\n\ \ \ \ \ \ \ \ for\ (int\ i\ \=\ 0;\ i\ <\ 10;\ i++)\n\ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ \ \ \ hand.get(i).equals(null);\n\ \ \ \ \ \ \ \ }\n}
+comment4.params=
+comment4.target=java.util.ArrayList\ getHand()
+comment4.text=public\ void\ draw(Deck\ x)\n\ \ \ \ {\n\ \ \ \ \ \ \ \ hand.add(x.getDeck().get(0));\n\ \ \ \ \ \ \ \ x.getDeck().remove(0);\n}
+comment5.params=
+comment5.target=int\ getHandSize()
+comment6.params=x
+comment6.target=Card\ getCard(int)
+comment7.params=
+comment7.target=boolean\ checkBust()
+comment8.params=
+comment8.target=java.lang.String\ toString()
+numComments=9

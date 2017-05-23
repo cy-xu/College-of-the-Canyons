@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=BankAccount()
+comment1.params=x
+comment1.target=void\ deposit(double)
+comment2.params=x
+comment2.target=void\ withdraw(double)
+comment3.params=
+comment3.target=void\ addInterest()
+comment4.params=n
+comment4.target=void\ addMultipleInterest(int)
+comment5.params=
+comment5.target=double\ getBalance()
+comment6.params=
+comment6.target=double\ accountStatement()
+comment7.params=
+comment7.target=double\ overdraw()
+comment8.params=
+comment8.target=java.lang.String\ toString()
+numComments=9

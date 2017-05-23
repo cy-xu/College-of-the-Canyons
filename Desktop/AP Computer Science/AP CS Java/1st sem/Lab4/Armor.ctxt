@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=nam\ weigh\ aClass
+comment0.target=Armor(java.lang.String,\ double,\ int)
+comment1.params=
+comment1.target=int\ getArmorClass()
+comment2.params=
+comment2.target=double\ getDurability()
+comment3.params=
+comment3.target=boolean\ isBroken()
+comment4.params=x
+comment4.target=int\ getAttacked(int)
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment6.params=b
+comment6.target=boolean\ equals(Armor)
+comment7.params=other
+comment7.target=int\ compareTo(Armor)
+numComments=8
